@@ -1,0 +1,56 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+html{
+	background: #e23744;
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+body{
+	font-family: '_.pingfang_scregular';
+	font-size: 26px;
+	color:#ffffff;
+	overflow:hidden;
+}
+
+@font-face {
+	font-family: '_.pingfang_scregular';
+	src: url('---webfont.woff2') format('woff2'),
+	url('---webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+/* demo1 */
+
+#demo1,#demo2{
+	text-align: center;
+	color: #ffffff;
+	font-size: 26px;
+	float: left;
+}
+
+#demo1 span,#demo2 span{
+	font-size: 26px;
+	font-weight: bold;
+	color: #ffffff;
+}
+
+#demo {
+			 
+	overflow:hidden;
+	width: 100%;
+
+}
+ 
+#indemo {
+	float: left;
+    white-space: nowrap;
+	/*width: 800%;*/
+}
