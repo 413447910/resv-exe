@@ -6,21 +6,18 @@ $(function(){
 
     //var os = require('os');
     //var prettyBytes = require('pretty-bytes');
-	var ceshi = '<span>关于进一步规范行业协会商会收费管理的意见(发改经体〔2017〕1999号)关于开展大中型灌区农业节水综合示范工作的指导意见(发改农经〔2017〕2029号)heheceshi</span>';
+	  var ceshi = '<span>关于进一步规范行业协会商会收费管理的意见(发改经体〔2017〕1999号)关于开展大中型灌区农业节水综合示范工作的指导意见(发改农经〔2017〕2029号)heheceshi</span>';
 	
-	// rollingDisp(ceshi);
+//	 rollingDisp(ceshi);
 
-    $.get('http://resv-api.fimvisual.com/screen/notice', function(response){
-
+    $.get('http://resv.tjdi.tongji.edu.cn/public/notice.json', function(response){
         var rss = response;
-		//rollingDisp(ceshi);
-		if(rss.errCode === 0){
-			//rollingDisp('<span>刷新等待中</span>');
-		//	rss.data = ceshi
-			rollingDisp(rss.data);
-		}else if(rss.errCode != 0){
-			rollingDisp('<span>刷新等待中</span>');
-		}
+		    if(rss.errCode === 0){
+		        rollingDisp(rss.data);
+		    }else if(rss.errCode != 0){
+			      rollingDisp('<span>刷新等待中</span>');
+		    }
+
         // Find all articles in the RSS feed:
 
         /*rss.find('item').each(function(){
